@@ -1,0 +1,16 @@
+frontend:
+  build: frontend/
+  ports:
+    - 9000:9000
+  hostname: frontend
+  environment:
+    FRONTEND_HOSTNAME: dockermeetupdemo_frontend_1
+    FRONTEND_BIND_HOSTNAME: frontend
+    BACKEND_HOSTNAME: dockermeetupdemo_backend_1
+
+backend:
+  build: backend/
+  hostname: backend
+  environment:
+    BACKEND_HOSTNAME: dockermeetupdemo_backend_1
+    BACKEND_BIND_HOSTNAME: backend
